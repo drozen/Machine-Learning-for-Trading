@@ -1,0 +1,90 @@
+MOST RECENT data
+
+ML4T-399 IN SAMPLE
+
+k =  5
+Number of bags:  20
+In sample results
+RMSE:  0.000740068149779
+corr:  0.999987242947
+
+Data Range: 2007-12-31 to 2009-12-31
+
+Sharpe Ratio of Fund: 6.94438547065
+Sharpe Ratio of $SPX: -0.21996865409
+
+Cumulative Return of Fund: 4.02166813
+Cumulative Return of $SPX: -0.240581328829
+
+Standard Deviation of Fund: 0.00737807995534
+Standard Deviation of $SPX: 0.0219524869863
+
+Average Daily Return of Fund: 0.00322757919013
+Average Daily Return of $SPX: -0.000304189525556
+Final Portfolio Value: 50216.6813
+
+ML4T-399 OUT OF SAMPLE
+
+Out of sample results
+RMSE:  0.00070504090674
+corr:  0.999988374019
+
+Data Range: 2009-12-31 to 2010-12-31
+
+Sharpe Ratio of Fund: 7.54908475589
+Sharpe Ratio of $SPX: 0.756512754402
+
+Cumulative Return of Fund: 2.06004713
+Cumulative Return of $SPX: 0.127827100708
+
+Standard Deviation of Fund: 0.00944609267468
+Standard Deviation of $SPX: 0.0113715303326
+
+Average Daily Return of Fund: 0.00449206708097
+Average Daily Return of $SPX: 0.000541919649169
+Final Portfolio Value: 30600.4713
+
+IBM IN SAMPLE
+
+k =  5
+Number of bags:  20
+In sample results
+RMSE:  0.0361430563998
+corr:  0.561835434391
+
+Data Range: 2007-12-31 to 2009-12-31
+
+Sharpe Ratio of Fund: 2.62400664839
+Sharpe Ratio of $SPX: -0.21996865409
+
+Cumulative Return of Fund: 0.9693
+Cumulative Return of $SPX: -0.240581328829
+
+Standard Deviation of Fund: 0.0083314785834
+Standard Deviation of $SPX: 0.0219524869863
+
+Average Daily Return of Fund: 0.00137716742955
+Average Daily Return of $SPX: -0.000304189525556
+Final Portfolio Value: 19693.0
+
+IBM OUT OF SAMPLE
+
+Out of sample results
+RMSE:  0.0275997887905
+corr:  0.0602149310415
+
+Data Range: 2009-12-31 to 2010-12-31
+
+Sharpe Ratio of Fund: 1.73320251849
+Sharpe Ratio of $SPX: 0.756512754402
+
+Cumulative Return of Fund: 0.3089
+Cumulative Return of $SPX: 0.127827100708
+
+Standard Deviation of Fund: 0.0102675013926
+Standard Deviation of $SPX: 0.0113715303326
+
+Average Daily Return of Fund: 0.00112102116312
+Average Daily Return of $SPX: 0.000541919649169
+Final Portfolio Value: 13089.0
+
