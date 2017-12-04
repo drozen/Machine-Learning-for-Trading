@@ -1,0 +1,303 @@
+Previous results
+
+ML4T files
+
+
+
+
+
+LINREG Bags = 20
+MLT
+IN SAMPLE
+
+Number of bags:  20
+In sample results
+RMSE:  0.0110310203475
+corr:  0.99714789474
+
+Out of sample results
+RMSE:  0.0110484045661
+corr:  0.99712555248
+Data Range: 2007-12-31 to 2009-12-31
+
+Sharpe Ratio of Fund: 8.61356743065
+Sharpe Ratio of $SPX: -0.21996865409
+Percent diff:  52.6206715373
+
+Cumulative Return of Fund: 4.87109429
+Cumulative Return of $SPX: -0.240581328829
+Percent diff:  55.1955653909
+
+Standard Deviation of Fund: 0.00650951684839
+Standard Deviation of $SPX: 0.0219524869863
+Percent diff:  -27.1290985476
+
+Average Daily Return of Fund: 0.00353208822513
+Average Daily Return of $SPX: -0.000304189525556
+Percent diff:  59.423763069
+Final Portfolio Value: 58710.9429
+
+OUT OF SAMPLE
+
+Number of bags:  20
+In sample results
+RMSE:  0.0110318681565
+corr:  0.997147583455
+
+Out of sample results
+RMSE:  0.0110558967282
+corr:  0.997124544401
+
+
+Data Range: 2009-12-31 to 2010-12-31
+
+Sharpe Ratio of Fund: 9.43980222254
+Sharpe Ratio of $SPX: 0.756512754402
+Percent diff:  42.5805278072
+
+Cumulative Return of Fund: 2.48582683
+Cumulative Return of $SPX: 0.127827100708
+Percent diff:  45.1092568451
+
+Standard Deviation of Fund: 0.00841216821401
+Standard Deviation of $SPX: 0.0113715303326
+Percent diff:  -7.47929440903
+
+Average Daily Return of Fund: 0.00500230966978
+Average Daily Return of $SPX: 0.000541919649169
+Percent diff:  40.2255188595
+Final Portfolio Value: 34858.2683
+
+IBM
+
+In sample: 
+Data Range: 2007-12-31 to 2009-12-31
+
+Sharpe Ratio of Fund: -0.956294551153
+Sharpe Ratio of $SPX: -0.21996865409
+Percent diff:  -31.2993679382
+
+Cumulative Return of Fund: -0.4653
+Cumulative Return of $SPX: -0.240581328829
+Percent diff:  -15.9175956349
+
+Standard Deviation of Fund: 0.0127267622278
+Standard Deviation of $SPX: 0.0219524869863
+Percent diff:  13.301505897
+
+Average Daily Return of Fund: -0.000766671538712
+Average Daily Return of $SPX: -0.000304189525556
+Percent diff:  -21.5939316775
+Final Portfolio Value: 5347.0
+
+
+Out of sample
+
+Data Range: 2009-12-31 to 2010-12-31
+
+Sharpe Ratio of Fund: -0.520458432423
+Sharpe Ratio of $SPX: 0.756512754402
+Percent diff:  270.482483887
+
+Cumulative Return of Fund: -0.1493
+Cumulative Return of $SPX: 0.127827100708
+Percent diff:  -645.295022684
+
+Standard Deviation of Fund: 0.00600561092111
+Standard Deviation of $SPX: 0.0113715303326
+Percent diff:  15.4395919707
+
+Average Daily Return of Fund: -0.000196898755668
+Average Daily Return of $SPX: 0.000541919649169
+Percent diff:  107.068646965
+Final Portfolio Value: 8507.0
+
+
+
+Using a 5% threshold 
+
+IBM
+
+
+Data Range: 2007-12-31 to 2009-12-31
+
+Sharpe Ratio of Fund: -0.269447239297
+Sharpe Ratio of $SPX: -0.21996865409
+Percent diff:  -5.05486089384
+
+Cumulative Return of Fund: -0.138
+Cumulative Return of $SPX: -0.240581328829
+Percent diff:  13.5481230871
+
+Standard Deviation of Fund: 0.0105045408251
+Standard Deviation of $SPX: 0.0219524869863
+Percent diff:  17.6355429518
+
+Average Daily Return of Fund: -0.000178299670719
+Average Daily Return of $SPX: -0.000304189525556
+Percent diff:  13.045872924
+Final Portfolio Value: 8620.0
+
+Data Range: 2009-12-31 to 2010-12-31
+
+Sharpe Ratio of Fund: -0.746033160598
+Sharpe Ratio of $SPX: 0.756512754402
+Percent diff:  7168.91295143
+
+Cumulative Return of Fund: -0.182
+Cumulative Return of $SPX: 0.127827100708
+Percent diff:  -285.961342996
+
+Standard Deviation of Fund: 0.00537335469979
+Standard Deviation of $SPX: 0.0113715303326
+Percent diff:  17.9104712311
+
+Average Daily Return of Fund: -0.000252524413572
+Average Daily Return of $SPX: 0.000541919649169
+Percent diff:  137.259354167
+Final Portfolio Value: 8180.0
+
+
+ML4t
+KNN
+k =  3
+Number of bags:  5
+In sample results
+RMSE:  0.0125920869741
+corr:  0.996324618635
+
+Out of sample results
+RMSE:  0.00469159977216
+corr:  0.999494994335
+
+LINREG
+Number of bags:  1
+In sample results
+RMSE:  0.0069327374318
+corr:  0.998868054596
+
+Out of sample results
+RMSE:  0.00695024492284
+corr:  0.998870474479
+
+IBM
+knn 
+k =  3
+Number of bags:  1
+In sample results
+RMSE:  0.0246011368564
+corr:  0.833928549981
+
+Out of sample results
+RMSE:  0.0185506342045
+corr:  0.643766015475
+
+LINREG
+Number of bags:  1
+In sample results
+RMSE:  0.0297907829432
+corr:  0.723892381221
+
+Out of sample results
+RMSE:  0.0193193581595
+corr:  0.743295492562	
+
+
+
+
+
+
+IBM KNN BAGS = 20     trade threshold  .01
+k =  3
+Number of bags:  20
+In sample results
+RMSE:  0.0314366723018
+corr:  0.716001617397
+
+Out of sample results
+RMSE:  0.0290049082727
+corr:  0.0565411314919
+
+
+Data Range: 2009-12-31 to 2010-12-31
+
+Sharpe Ratio of Fund: 1.04892858507
+Sharpe Ratio of $SPX: 0.756512754402
+Percent diff:  8.09818143288
+
+Cumulative Return of Fund: 0.184
+Cumulative Return of $SPX: 0.127827100708
+Percent diff:  9.00705858534
+
+Standard Deviation of Fund: 0.0110694929268
+Standard Deviation of $SPX: 0.0113715303326
+Percent diff:  -0.6729581854
+
+Average Daily Return of Fund: 0.000731431024563
+Average Daily Return of $SPX: 0.000541919649169
+Percent diff:  7.44144481577
+Final Portfolio Value: 11840.0
+
+
+k =  3
+Number of bags:  20
+In sample results
+RMSE:  0.0316175619852
+corr:  0.702861315485
+
+Out of sample results
+RMSE:  0.0293301442923
+corr:  0.0266815484253
+
+Data Range: 2009-12-31 to 2010-12-31
+
+Sharpe Ratio of Fund: 0.42331609263
+Sharpe Ratio of $SPX: 0.756512754402
+Percent diff:  -14.1205507312
+
+Cumulative Return of Fund: 0.0456
+Cumulative Return of $SPX: 0.127827100708
+Percent diff:  -23.7065315549
+
+Standard Deviation of Fund: 0.00776139322838
+Standard Deviation of $SPX: 0.0113715303326
+Percent diff:  -9.43435824829
+
+Average Daily Return of Fund: 0.00020696847313
+Average Daily Return of $SPX: 0.000541919649169
+Percent diff:  -22.3632319745
+Final Portfolio Value: 10456.0
+
+
+
+
+
+
+k =  5
+Number of bags:  10
+In sample results
+RMSE:  0.0362760220316
+corr:  0.551332212223
+
+Out of sample results
+RMSE:  0.0284864324652
+corr:  0.0136276299897
+
+Data Range: 2009-12-31 to 2010-12-31
+
+Sharpe Ratio of Fund: 1.08382241546
+Sharpe Ratio of $SPX: 0.756512754402
+Percent diff:  8.89266440195
+
+Cumulative Return of Fund: 0.2126
+Cumulative Return of $SPX: 0.127827100708
+Percent diff:  12.4509622053
+
+Standard Deviation of Fund: 0.0123117679001
+Standard Deviation of $SPX: 0.0113715303326
+Percent diff:  1.98502243708
+
+Average Daily Return of Fund: 0.000840578500849
+Average Daily Return of $SPX: 0.000541919649169
+Percent diff:  10.8014195779
+Final Portfolio Value: 12126.0
