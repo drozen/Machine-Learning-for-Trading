@@ -23,8 +23,8 @@ if __name__=="__main__":
     #print data
 
     # compute how much of the data is training and testing
-    train_rows = math.floor(0.6* data.shape[0])
-    test_rows = data.shape[0] - train_rows
+    train_rows = int(math.floor(0.6* data.shape[0]))
+    test_rows = int(data.shape[0] - train_rows)
 
     # # separate out training and testing data
     # trainX = data[:train_rows,0:-1]
