@@ -6,6 +6,7 @@ import os
 import csv
 
 from util import get_data, plot_data
+from portfolio.analysis import get_portfolio_value, get_portfolio_stats, plot_normalized_data
 
 
 def compute_portvals(start_date, end_date, orders_file, start_val):
