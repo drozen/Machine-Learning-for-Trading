@@ -8,14 +8,16 @@ import pandas as pd
 import numpy as np
 import os
 import matplotlib.pyplot as plt
+from marketsim_BTC import *
 
 # Adjust the following for tickers and dates
 start_date = '2015-12-21'
 end_date = '2017-12-21'
 # tickerSymbol = 'AAPL' / GOOGL, BTC-USD, AMZN
 tickerSymbol = 'AAPL'
-
-numShares = str(100) #number of shares to buy and sell in each trade
+start_val = 5000  # start value of portfolio
+numShares = 5 #number of shares to buy and sell in each trade
+numShares= str(numShares)
 # TODO: adjust buyThreshold
 # buyThreshold = 10
 buyThreshold = 1
@@ -76,7 +78,7 @@ def daily_change(df):
 
 
 
-def test_run(start_date,end_date):
+def test_run(start_date, end_date):
 
     # widen print output
     pd.set_option('display.max_columns', 100)
@@ -231,13 +233,13 @@ def test_run(start_date,end_date):
     # print '\nplotDf[[ , ]]\n', plotDF
     # Plot data:
     #ax = plotDF[['"+tickerSymbol+"_normalized','bollingerValue','bollingerValueSPY']].plot(title="Stock prices", fontsize=12)
-    ax = plotDF[[tickerSymbol+'_normalized', 'Daily_Change_Bollinger_Value']].plot(title="Stock prices", fontsize=12)
-
+    ax = plotDF[[tickerSymbol+'_normalized', 'Daily_Change_Bollinger_Value']].plot(title="Stock prices, red = entry, black = exit", fontsize=12)
+    ax.set_ylim([-10,15])
     ax.set_xlabel("Date")
     ax.set_ylabel("Price")
     # plot vertical lines
-    plt.vlines(x = longEntriesDates, ymin = -15, ymax = 15, colors = 'red')
-    plt.vlines(x = longExitsDates, ymin = -15, ymax = 15, colors = 'black')
+    plt.vlines(x = longEntriesDates, ymin = -15, ymax = 15, colors = 'red', label = 'Entry')
+    plt.vlines(x = longExitsDates, ymin = -15, ymax = 15, colors = 'black', label = 'Exit')
     # plt.vlines(x = shortEntriesDates, ymin = 60, ymax = 130, colors = 'red')
     # plt.vlines(x = shortExitsDates, ymin = 60, ymax = 130, colors = 'black')
 
@@ -245,6 +247,68 @@ def test_run(start_date,end_date):
 
     # plot vertical lines
 
+
+def market_sim(start_val):
+    """Driver function."""
+    # Define input parameters
+    # start_date = '2011-01-05'
+    # end_date = '2011-01-20'
+    # orders_file = os.path.join("orders", "orders-short.csv")
+    # start_val = 1000000
+
+    # # Test 2:
+    # start_date = '2011-01-10'
+    # end_date = '2011-12-20'
+    # orders_file = os.path.join("orders", "orders.csv")
+    # start_val = 1000000
+
+    # Test 3
+    # start_date = '2007-12-31'
+    # end_date = '2009-12-31'
+    # orders_file = os.path.join("orders", "ordersMC2P2.csv")
+    orders_file = os.path.join("orders.csv")
+
+
+
+    # Process orders
+    portvals = compute_portvals(start_date, end_date, orders_file, start_val)
+    if isinstance(portvals, pd.DataFrame):
+        portvals = portvals[portvals.columns[0]]  # if a DataFrame is returned select the first column to get a Series
+
+    # Get portfolio stats
+    cum_ret, avg_daily_ret, std_daily_ret, sharpe_ratio = get_portfolio_stats(portvals)
+
+    # Simulate a SPY-only reference portfolio to get stats
+    prices_SPY = get_data(['SPY'], pd.date_range(start_date, end_date))
+    prices_SPY = prices_SPY[['SPY']]  # remove SPY
+    portvals_SPY = get_portfolio_value(prices_SPY, [1.0])
+    cum_ret_SPY, avg_daily_ret_SPY, std_daily_ret_SPY, sharpe_ratio_SPY = get_portfolio_stats(portvals_SPY)
+
+    # Compare portfolio against SPY
+    print "Data Range: {} to {}".format(start_date, end_date)
+    print
+    print "Sharpe Ratio of Fund: {}".format(sharpe_ratio)
+    print "Sharpe Ratio of SPY: {}".format(sharpe_ratio_SPY)
+    print "Percent diff: ", percentDiff(sharpe_ratio, 0.97745615082)
+    print "\nCumulative Return of Fund: {}".format(cum_ret)
+    print "Cumulative Return of SPY: {}".format(cum_ret_SPY)
+    print "Percent diff: ", percentDiff(cum_ret, 0.3614)
+
+    print "\nStandard Deviation of Fund: {}".format(std_daily_ret)
+    print "Standard Deviation of SPY: {}".format(std_daily_ret_SPY)
+    print "Percent diff: ", percentDiff(std_daily_ret, 0.0108802922269)
+
+    print "\nAverage Daily Return of Fund: {}".format(avg_daily_ret)
+    print "Average Daily Return of SPY: {}".format(avg_daily_ret_SPY)
+    print "Percent diff: ", percentDiff(avg_daily_ret, 0.000669942567631)
+
+    print "Final Portfolio Value: {}".format(portvals[-1])
+
+    # Plot computed daily portfolio value
+    df_temp = pd.concat([portvals, prices_SPY['SPY']], keys=['Portfolio', 'SPY'], axis=1)
+    plot_normalized_data(df_temp, title="Daily portfolio value and SPY")
+
 if __name__ == "__main__":
     test_run(start_date, end_date)
+    market_sim(start_val)
 
