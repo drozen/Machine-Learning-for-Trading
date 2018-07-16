@@ -16,12 +16,6 @@ Transformed my regression learner into a stock trading strategy (see /mc3_p2/)
 
 Implemented and assessed Q-Learning to solve a navigation problem (see /mc3_p3/)
 
-
-
 Projects are written in Python 2.7
 
-To find out about projects view .doc files for each project.
-
-eg. for project 1:
-
-\mc1_p1\MC1-Project-1.docx
+Please contact me for project code.
