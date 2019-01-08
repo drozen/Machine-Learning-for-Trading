@@ -20,4 +20,5 @@ Implemented and assessed Q-Learning to solve a navigation problem (see MC3-Proje
 
 Projects are written in Python 2.7
 
-Please contact me for project code.
+Please contact me for the project code
+
